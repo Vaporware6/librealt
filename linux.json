@@ -1,218 +1,175 @@
 {
-  "Distributions": {
-    "arch": {
+  "OS": [
+    {
+      "name": "Linux Mint",
+      "use_case": ["Daily Driver"],
+      "base": "Ubuntu",
+      "performance": 85,
+      "security": 70,
+      "desc": "The gold standard for people switching from Windows. Stable and familiar.",
+      "dl": "https://linuxmint.com/download.php",
+      "docs": "https://linuxmint.com/documentation.php"
+    },
+    {
+      "name": "MX Linux",
+      "use_case": ["Daily Driver", "Performance"],
+      "base": "Debian",
+      "performance": 92,
+      "security": 88,
+      "desc": "Stable midweight distro with strong usability tools.",
+      "dl": "https://mxlinux.org/download-links/",
+      "docs": "https://mxlinux.org/manuals"
+    },
+    {
+      "name": "Fedora Silverblue",
+      "use_case": ["Security", "Daily Driver"],
+      "base": "Fedora",
+      "performance": 88,
+      "security": 97,
+      "desc": "Immutable desktop OS with atomic updates and container-first design.",
+      "dl": "https://fedoraproject.org/silverblue/",
+      "docs": "https://docs.fedoraproject.org/en-US/fedora-silverblue/"
+    },
+    {
+      "name": "openSUSE MicroOS",
+      "use_case": ["Security", "Workstation"],
+      "base": "Independent",
+      "performance": 90,
+      "security": 98,
+      "desc": "Immutable system with transactional updates for maximum stability.",
+      "dl": "https://microos.opensuse.org/",
+      "docs": "https://en.opensuse.org/Portal:MicroOS"
+    },
+    {
+      "name": "CachyOS",
+      "use_case": ["Performance", "Gaming"],
+      "base": "Arch",
+      "performance": 99,
+      "security": 75,
+      "desc": "Highly optimized Arch-based distro tuned for modern CPUs.",
+      "dl": "https://cachyos.org/download/",
+      "docs": "https://wiki.cachyos.org/"
+    },
+    {
+      "name": "Kali Linux",
+      "use_case": ["Security"],
+      "base": "Debian",
+      "performance": 60,
+      "security": 100,
+      "desc": "Industry standard penetration testing distro.",
+      "dl": "https://www.kali.org/get-kali/",
+      "docs": "https://www.kali.org/docs/"
+    },
+    {
+      "name": "Tails",
+      "use_case": ["Security"],
+      "base": "Debian",
+      "performance": 50,
+      "security": 100,
+      "desc": "Amnesic OS designed to leave no trace.",
+      "dl": "https://tails.net/install/",
+      "docs": "https://tails.net/doc/"
+    },
+    {
       "name": "Arch Linux",
-      "url": "https://archlinux.org/",
-      "description": "Minimal rolling-release distro for full system control and customization."
+      "use_case": ["Performance", "Daily Driver"],
+      "base": "Arch",
+      "performance": 95,
+      "security": 80,
+      "desc": "Minimal DIY Linux system built from the ground up.",
+      "dl": "https://archlinux.org/download/",
+      "docs": "https://wiki.archlinux.org/"
     },
-    "debian": {
-      "name": "Debian",
-      "url": "https://www.debian.org/",
-      "description": "Stable, conservative base system used for servers and secure desktops."
-    },
-    "fedora": {
-      "name": "Fedora Workstation",
-      "url": "https://fedoraproject.org/",
-      "description": "Cutting-edge Linux distro backed by Red Hat with strong security defaults."
-    },
-    "qubes": {
-      "name": "Qubes OS",
-      "url": "https://www.qubes-os.org/",
-      "description": "Security-by-isolation OS using VM compartmentalization for every app."
-    },
-    "tails": {
-      "name": "Tails OS",
-      "url": "https://tails.net/",
-      "description": "Amnesic live system routing all traffic through Tor for anonymity."
-    },
-    "nixos": {
+    {
       "name": "NixOS",
-      "url": "https://nixos.org/",
-      "description": "Declarative Linux system with reproducible configurations."
-    },
-    "alpine": {
-      "name": "Alpine Linux",
-      "url": "https://alpinelinux.org/",
-      "description": "Ultra-minimal, security-focused distro widely used in containers."
+      "use_case": ["Workstation", "Security"],
+      "base": "Independent",
+      "performance": 90,
+      "security": 95,
+      "desc": "Declarative OS where everything is defined in config.",
+      "dl": "https://nixos.org/download.html",
+      "docs": "https://nixos.org/learn.html"
     }
-  },
+  ],
 
-  "Package Managers": {
-    "pacman": {
-      "name": "Pacman (Arch)",
-      "url": "https://wiki.archlinux.org/title/pacman",
-      "description": "Fast package manager for Arch-based systems."
+  "Software": [
+    {
+      "name": "LibreWolf",
+      "category": "Browser",
+      "desc": "Privacy-hardened Firefox fork with telemetry removed.",
+      "url": "https://librewolf.net/"
     },
-    "apt": {
-      "name": "APT (Debian/Ubuntu)",
-      "url": "https://wiki.debian.org/Apt",
-      "description": "Standard package manager for Debian-based systems."
-    },
-    "dnf": {
-      "name": "DNF (Fedora)",
-      "url": "https://docs.fedoraproject.org/en-US/quick-docs/dnf/",
-      "description": "Modern package manager for Fedora and RHEL systems."
-    },
-    "flatpak": {
-      "name": "Flatpak",
-      "url": "https://flatpak.org/",
-      "description": "Sandboxed cross-distro application distribution system."
-    },
-    "snap": {
-      "name": "Snap",
-      "url": "https://snapcraft.io/",
-      "description": "Containerized app distribution system by Canonical."
-    },
-    "appimage": {
-      "name": "AppImage",
-      "url": "https://appimage.org/",
-      "description": "Portable Linux applications without installation."
-    }
-  },
-
-  "Privacy & Anonymity": {
-    "tor": {
+    {
       "name": "Tor Browser",
-      "url": "https://www.torproject.org/",
-      "description": "Anonymous browsing via onion routing network."
+      "category": "Privacy",
+      "desc": "Anonymous browsing via Tor network.",
+      "url": "https://www.torproject.org/"
     },
-    "i2p": {
-      "name": "I2P",
-      "url": "https://geti2p.net/",
-      "description": "Anonymous peer-to-peer overlay network."
+    {
+      "name": "KeePassXC",
+      "category": "Security",
+      "desc": "Offline encrypted password manager.",
+      "url": "https://keepassxc.org/"
     },
-    "mullvad_vpn": {
-      "name": "Mullvad VPN",
-      "url": "https://mullvad.net/",
-      "description": "No-account VPN focused on anonymity."
+    {
+      "name": "Bitwarden",
+      "category": "Security",
+      "desc": "Open-source password manager with sync.",
+      "url": "https://bitwarden.com/"
     },
-    "proton_vpn": {
-      "name": "Proton VPN",
-      "url": "https://protonvpn.com/",
-      "description": "Privacy-focused VPN with strong encryption and no-logs policy."
+    {
+      "name": "Cryptomator",
+      "category": "Encryption",
+      "desc": "Client-side encrypted cloud vault.",
+      "url": "https://cryptomator.org/"
     },
-    "dnscrypt": {
-      "name": "DNSCrypt-Proxy",
-      "url": "https://github.com/DNSCrypt/dnscrypt-proxy",
-      "description": "Encrypted DNS resolver with filtering and anti-tracking."
-    }
-  },
-
-  "Firewall & Network Control": {
-    "ufw": {
-      "name": "UFW (Uncomplicated Firewall)",
-      "url": "https://wiki.ubuntu.com/UncomplicatedFirewall",
-      "description": "Simple interface for Linux iptables firewall control."
+    {
+      "name": "WireGuard",
+      "category": "VPN",
+      "desc": "Fast modern VPN protocol built into Linux kernel.",
+      "url": "https://www.wireguard.com/"
     },
-    "nftables": {
-      "name": "nftables",
-      "url": "https://wiki.nftables.org/",
-      "description": "Modern Linux packet filtering framework."
+    {
+      "name": "OpenSnitch",
+      "category": "Firewall",
+      "desc": "Per-app firewall control for Linux.",
+      "url": "https://github.com/evilsocket/opensnitch"
     },
-    "firewalld": {
-      "name": "Firewalld",
-      "url": "https://firewalld.org/",
-      "description": "Dynamic firewall manager used in Fedora/RHEL systems."
+    {
+      "name": "Flatpak",
+      "category": "App Distribution",
+      "desc": "Sandboxed universal Linux app format.",
+      "url": "https://flatpak.org/"
     },
-    "wireshark": {
-      "name": "Wireshark",
-      "url": "https://www.wireshark.org/",
-      "description": "Deep packet inspection and network analysis tool."
-    }
-  },
-
-  "Security & Hardening": {
-    "lynis": {
-      "name": "Lynis",
-      "url": "https://cisofy.com/lynis/",
-      "description": "Security auditing tool for Linux systems."
-    },
-    "apparmor": {
-      "name": "AppArmor",
-      "url": "https://gitlab.com/apparmor/apparmor",
-      "description": "Mandatory access control system for application confinement."
-    },
-    "selinux": {
-      "name": "SELinux",
-      "url": "https://selinuxproject.org/",
-      "description": "Kernel-level security module enforcing strict policies."
-    },
-    "fail2ban": {
-      "name": "Fail2Ban",
-      "url": "https://www.fail2ban.org/",
-      "description": "Blocks brute-force attacks by banning suspicious IPs."
-    }
-  },
-
-  "Encryption & Privacy Tools": {
-    "veracrypt": {
-      "name": "VeraCrypt",
-      "url": "https://www.veracrypt.fr/",
-      "description": "Disk encryption for full volumes and containers."
-    },
-    "gpg": {
-      "name": "GnuPG (GPG)",
-      "url": "https://gnupg.org/",
-      "description": "OpenPGP encryption for files and communications."
-    },
-    "cryptsetup": {
-      "name": "Cryptsetup (LUKS)",
-      "url": "https://gitlab.com/cryptsetup/cryptsetup/",
-      "description": "Disk encryption layer used in most Linux full-disk encryption setups."
-    }
-  },
-
-  "System Monitoring": {
-    "htop": {
-      "name": "htop",
-      "url": "https://htop.dev/",
-      "description": "Interactive process viewer for Linux systems."
-    },
-    "btop": {
-      "name": "btop",
-      "url": "https://github.com/aristocratos/btop",
-      "description": "Modern system monitor with CPU, RAM, and network graphs."
-    },
-    "iotop": {
-      "name": "iotop",
-      "url": "https://github.com/Tomas-M/iotop",
-      "description": "Disk I/O monitoring tool."
-    }
-  },
-
-  "Containers & Isolation": {
-    "docker": {
-      "name": "Docker",
-      "url": "https://www.docker.com/",
-      "description": "Container platform for isolated application environments."
-    },
-    "podman": {
+    {
       "name": "Podman",
-      "url": "https://podman.io/",
-      "description": "Daemonless container engine with rootless execution support."
+      "category": "Containers",
+      "desc": "Daemonless Docker alternative.",
+      "url": "https://podman.io/"
     },
-    "lxc": {
-      "name": "LXC",
-      "url": "https://linuxcontainers.org/",
-      "description": "Lightweight OS-level virtualization containers."
+    {
+      "name": "GParted",
+      "category": "System Tools",
+      "desc": "Graphical disk partition editor.",
+      "url": "https://gparted.org/"
+    },
+    {
+      "name": "Timeshift",
+      "category": "Backup",
+      "desc": "System restore snapshots for Linux.",
+      "url": "https://github.com/linuxmint/timeshift"
+    },
+    {
+      "name": "BleachBit",
+      "category": "System Cleanup",
+      "desc": "Open-source system cleaner.",
+      "url": "https://www.bleachbit.org/"
+    },
+    {
+      "name": "Neovim",
+      "category": "Development",
+      "desc": "Modern extensible Vim-based editor.",
+      "url": "https://neovim.io/"
     }
-  },
-
-  "Development & Forensics": {
-    "git": {
-      "name": "Git",
-      "url": "https://git-scm.com/",
-      "description": "Version control system for tracking code changes."
-    },
-    "radare2": {
-      "name": "radare2",
-      "url": "https://rada.re/n/",
-      "description": "Reverse engineering and binary analysis framework."
-    },
-    "ghidra": {
-      "name": "Ghidra",
-      "url": "https://ghidra-sre.org/",
-      "description": "NSA-developed reverse engineering suite."
-    }
-  }
+  ]
 }
